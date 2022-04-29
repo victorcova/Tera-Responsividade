@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  div{
+    box-sizing:border-box;
+  }
+  
+  .main{
+    min-height:100vh;
+    border:5px solid red;
+  }
+  
+  .main, .main-content{
+    display:flex;
+    flex:1 1 auto;
+    flex-direction:column;
+  }
+  
+  .main-content{
+    border:5px solid blue;
+  }
+  
+  .content-section{
+     flex:1 1 auto;
+  }
+  
+  .sidebar{
+    background-color:green;
+    min-height:20vh;
+    border:5px solid red;
+    min-width:20vw;
+  }
+  
+  .sidebar-1{
+    order:-1;
+  }
+  
+  header,footer{
+    height:15vh;
+    background-color:deepskyblue;
+  }
+  
+  
+  @media(min-width:768px){
+    .main-content{
+       flex-direction:row;
+    }
+  }
