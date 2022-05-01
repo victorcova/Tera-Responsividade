@@ -22,12 +22,38 @@
     <div class="col-1 mycolumn">11</div>
     <div class="col-1 mycolumn">12</div>
     
-    <div class="col-12 mycolumn"><img src="" alt=""></div>
+    <div class="col-12 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+
+    <div class="col-6 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-6 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+
+
+    <div class="col-4 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-4 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-4 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+
+    <div class="col-3 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-3 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-3 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-3 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+
+    <div class="col-2 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-2 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-2 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-2 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-2 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+    <div class="col-2 mycolumn"><img src="imgs/bkg-sample.jpg"></div>
+
+
 
     </div><!-- fecha row -->
     
 
     <style>
+
+        body{
+            font-size: calc(0.2em + 2vw);
+        }
          
         /* BREAKPOINT PARA DESKTOP: */
         .col-1 {width: 8.33%;}
@@ -41,14 +67,7 @@
         .col-9 {width: 75%;}
         .col-10 {width: 83.33%;}
         .col-11 {width: 91.66%;}
-        .col-12 {width: 100%;}
-
-        /* BREAKPOINT PARA CELULARES: */
-        @media only screen and (max-width: 768px) {            
-            [class*="col-"] {
-            width: 100%;
-        }
-        }        
+        .col-12 {width: 100%;}    
 
         .row{
             float: left;
@@ -59,12 +78,15 @@
 
         .mycolumn{
             float: left;
-            text-align:center;
-            font-size: 2em;
+            text-align:center;            
             background-color: lightgray;
             border: 1px solid red; /* debug */
-            height: 80px;            
-            padding-top: 22px;
+            height: auto;
+        }
+
+        img{ /* IMAGEM RESPONSIVA - AJUSTE DO MELHOR ESPAÇO POSSÍVEL AUTOMÁTICO */
+            width: 100%; /* 100% do elemento pai */
+            height: auto;
         }
 
 
