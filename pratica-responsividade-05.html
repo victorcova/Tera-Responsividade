@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Prática de Responsividade - FLEXBOX</title>
+</head>
+<body>    
+
+    <div class="flex-container"> <!-- abre meu container -->
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+
+    </div> <!-- fecha meu container -->
+    
+
+    <style>
+
+        /* REGRA BASE: Para usar flexbox deve-se ter um container (uma div pai) */
+        /* PROPRIEDADES FLEXBOX: flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content */
+        /* GUIA FLEXBOX: https://css-tricks.com/snippets/css/a-guide-to-flexbox */
+
+        body{
+            font-size: calc(1em + 1vw);
+        }
+
+        .flex-container{ /* FLEX PARENT */
+            display: flex; /* Aqui faz com que a div em questão vire o CONTAINER. Não precisa ser efetivamente uma div, pode ser qquer outro elemento, ex.: <pai> */
+            background-color: black;
+            height: 400px;
+
+            /* flex-direction: column; /* os elementos serão exibidos em colunas */            
+            /* flex-direction: column-reverse; /* os elementos serão exibidos em colunas */            
+            /* flex-direction: row; /* os elementos serão exibidos em linhas na ordem normal*/
+            /* flex-direction: row-reverse; /* os elementos serão exibidos em linhas na ordem reversa*/
+
+            /* flex-wrap: wrap; /* os elementos serão quebrados na linha */
+            /* flex-wrap: nowrap; /* os elementos NÃO serão quebrados na linha */
+            /* flex-wrap: wrap-reverse; /* os elementos serão quebrados na linha e ficarão na ordem reversa */
+
+            flex-flow: row wrap; /* MISTURA: (flex-direction)+(flex-wrap) | os elementos serão exibidos em linha e quebrarão linha */
+            /* flex-flow: row nowrap; /* MISTURA: (flex-direction)+(flex-wrap) | os elementos serão exibidos em linha e NÃO quebrarão linha */
+            /* flex-flow: row-reverse wrap; /* MISTURA: (flex-direction)+(flex-wrap) | os elementos serão exibidos em linha em ordem inversa e quebrando linha*/
+            /* flex-flow: column-reverse nowrap; /* MISTURA: (flex-direction)+(flex-wrap) | os elementos serão exibidos em colunas, em ordem inversa e não quebrarão linha*/
+            
+            /* justify-content define o espaçamento igual entre os elementos */
+            /* justify-content: flex-start; /* posiciona os elementos à esquerda (início) da linha | pode utilizar: justify-content: left; */
+            /* justify-content: flex-end; /* posiciona os elementos à direita (final) da linha | pode utilizar: justify-content: right;*/
+            /* justify-content: center; /* posiciona os elementos ao centro da linha - forçando ao centro */
+            /* justify-content: space-between; /* posiciona os elementos ao centro da linha - forçando aos cantos */
+            /* justify-content: space-around; /* posiciona os elementos ao centro da linha - forçando aos espaços do centro */
+            /* justify-content: space-evenly; /* posiciona os elementos ao centro da linha - forçando aos espaços de todos os lados*/
+            
+            /* align-items: flex-start; /* posiciona os elementos na parte superior da linha */
+            align-items: flex-end; /* posiciona os elementos na parte inferior da linha */
+            /* align-items: center; /* posiciona os elementos na parte central da linha */
+            /* align-items: stretch; /* posiciona os elementos ocupando toda a linha*/
+            /* align-items: baseline; /* posiciona os elementos na parte central da linha mesmo com elementos de tamanhos diferentes*/
+            
+            /* align-content: controla as linhas do eixo vertical */
+            /* align-content: flex-start; /* controle de linhas tendendo à esquerda/superior */
+            /* align-content: flex-end; /* controle de linhas tendendo à esquerda/inferior */
+            /* align-content: center; /* controle de linhas tendendo à esquerda/centralizado */
+            /* align-content: stretch; /* controle de linhas tendendo à esquerda/preenchendo-todo-o-espaço */
+            /* align-content: space-between; /* controle de linhas tendendo à esquerda/espaçando-as-linhas */
+            /* align-content: space-around; /* controle de linhas tendendo à esquerda/espaçando-as-linhas+cantos */
+
+
+        }
+
+        .flex-container div{ /* FLEX ITEMS */
+            background-color: white;
+            width: 60px;            
+            /* height: 50px;*/
+            margin: 10px;
+            
+            /* flex:GROW SHRINK BASIS */
+            /* GROW: define a proporção com que um item deve crescer */
+            /* SHRINK: define a proporção com que um item deve encolher */
+            /* BASIS: é uma propriedade que utilizamos quando há a possibilidade de usar o flex-grow para "esticarmos" o elemento */
+            flex: 1 1 auto;
+
+            /* align-self: permite sobrescrever no item o comportamento que foi definido pela propriedade align-items. */
+            /* OPÇÕES: auto | flex-start | flex-end | center | baseline | stretch */
+            align-self: flex-start;
+
+        }
+
+
+    </style>
+
+    
+</body>
+</html>
